@@ -3,320 +3,259 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f6f1">
-  <meta name="description" content="Obrigado pela compra! Conheça a oferta especial para clientes: Método Fora do Algoritmo.">
-  <title>Obrigado pela compra | Oferta especial</title>
+  <meta name="theme-color" content="#f8f5f1">
+  <meta name="description" content="Obrigado pela compra do Método Grafismo Fonético. Veja sua oferta especial para clientes: Método Fora do Algoritmo.">
+  <title>Parabéns pela compra — GRAFISMO FONÉTICO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #17251f;
-      --muted: #68766e;
-      --green: #163d30;
-      --green2: #245b43;
-      --mint: #dcebd4;
-      --paper: #fbfcf9;
-      --line: #e6ebe4;
-      --gold: #d4b66f;
+      --bg:#f8f5f1;
+      --panel:#fffefd;
+      --ink:#292522;
+      --muted:#68615b;
+      --soft:#817871;
+      --line:#e9e1da;
+      --red:#b3322b;
+      --green:#287a4b;
+      --green-dark:#20643d;
+      --gold:#8e7958;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background:
-        radial-gradient(ellipse at 50% -15%, rgba(208,226,195,.55), transparent 48%),
-        #f5f6f1;
-      color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      -webkit-font-smoothing: antialiased;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;min-height:100vh;color:var(--ink);
+      background:linear-gradient(180deg,#f8f5f1 0%,#f1ece6 100%);
+      font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;
     }
-    .top {
-      height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 22px;
-      border-bottom: 1px solid rgba(23,37,31,.07);
-      color: #536259;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .13em;
+    .shell{width:min(850px,calc(100% - 36px));margin:0 auto}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:18px;padding:19px 0;border-bottom:1px solid var(--line)
     }
-    .top span { color: var(--green); }
-    main {
-      width: min(760px, calc(100% - 36px));
-      margin: 0 auto;
-      padding: 48px 0 54px;
+    .brand{
+      display:flex;align-items:center;gap:12px;color:var(--ink);
+      font:800 12px/1.15 Manrope,sans-serif;letter-spacing:.14em
     }
-    .thanks {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      margin: 0 auto 17px;
-      color: #427052;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .1em;
-      text-align: center;
-      text-transform: uppercase;
+    .brand-symbol{
+      width:40px;height:40px;display:grid;place-items:center;
+      border:1px solid #e8c9c3;border-radius:13px;
+      color:var(--red);background:#fff5f2;
+      font:800 12px Manrope,sans-serif;letter-spacing:.02em
     }
-    .check {
-      display: grid;
-      place-items: center;
-      width: 23px;
-      height: 23px;
-      border-radius: 50%;
-      color: white;
-      background: #4e8a5e;
+    .brand small{
+      display:block;margin-top:4px;color:#817871;
+      font-size:8px;letter-spacing:.2em
     }
-    .check svg { width: 13px; height: 13px; }
-    h1 {
-      max-width: 650px;
-      margin: 0 auto;
-      color: #182b21;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(36px, 6vw, 54px);
-      font-weight: 500;
-      letter-spacing: -.045em;
-      line-height: 1.08;
-      text-align: center;
+    .top-note{color:#817871;font-size:11px}
+    .page{padding:36px 0 45px}
+    .panel{
+      padding:clamp(25px,5vw,43px);
+      border:1px solid var(--line);border-radius:24px;
+      background:var(--panel);
+      box-shadow:0 14px 42px rgba(54,39,31,.065)
     }
-    .intro {
-      max-width: 550px;
-      margin: 17px auto 31px;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.7;
-      text-align: center;
+    .center{text-align:center}
+    .status{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:11px 16px;border:1px solid #edc4bd;border-radius:99px;
+      color:var(--red);background:#fff0ed;
+      font-size:11px;font-weight:900;letter-spacing:.09em
     }
-    .offer {
-      overflow: hidden;
-      border: 1px solid rgba(22,61,48,.1);
-      border-radius: 22px;
-      background: var(--paper);
-      box-shadow: 0 18px 55px rgba(27,49,36,.09);
+    .status .tick{
+      width:18px;height:18px;display:grid;place-items:center;
+      border-radius:50%;color:#fff;background:var(--red);
+      font-size:12px;line-height:1
     }
-    .offer-head {
-      position: relative;
-      padding: 27px 32px 25px;
-      color: white;
-      background: linear-gradient(125deg, #173d30 0%, #245940 100%);
+    .eyebrow{
+      display:block;margin-top:23px;color:#81766a;
+      font-size:9px;font-weight:800;letter-spacing:.19em;
+      text-transform:uppercase
     }
-    .offer-head::after {
-      content: "";
-      position: absolute;
-      top: -82px;
-      right: -40px;
-      width: 225px;
-      height: 225px;
-      border: 1px solid rgba(255,255,255,.13);
-      border-radius: 50%;
-      box-shadow: 0 0 0 25px rgba(255,255,255,.035), 0 0 0 50px rgba(255,255,255,.025);
-      pointer-events: none;
+    h1{
+      max-width:690px;margin:13px auto 13px;
+      color:var(--ink);font:800 clamp(34px,5vw,52px)/1.07 Manrope,sans-serif;
+      letter-spacing:-.05em
     }
-    .exclusive {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      margin-bottom: 17px;
-      padding: 7px 10px;
-      border: 1px solid rgba(221,239,205,.23);
-      border-radius: 999px;
-      color: #e4f0d7;
-      background: rgba(255,255,255,.07);
-      font-size: 9px;
-      font-weight: 850;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+    h1 em{color:var(--red);font-style:normal}
+    .page-lead{
+      max-width:620px;margin:0 auto;
+      color:var(--muted);font-size:14px;line-height:1.7
     }
-    .exclusive svg { width: 13px; height: 13px; color: #d9e9b3; }
-    .offer-head h2 {
-      position: relative;
-      z-index: 1;
-      max-width: 540px;
-      margin: 0 0 10px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(30px, 5vw, 43px);
-      font-weight: 500;
-      letter-spacing: -.035em;
-      line-height: 1.08;
+    .offer{
+      max-width:660px;margin:28px auto 0;overflow:hidden;
+      border:1px solid #e9ddd4;border-radius:19px;
+      background:#fffdfa;box-shadow:0 8px 25px rgba(54,39,31,.045);
+      text-align:left
     }
-    .offer-head h2 em { color: #d7e9b6; font-style: normal; }
-    .offer-head p {
-      position: relative;
-      z-index: 1;
-      max-width: 570px;
-      margin: 0;
-      color: rgba(255,255,255,.76);
-      font-size: 13px;
-      line-height: 1.65;
+    .offer-head{
+      padding:23px 25px 20px;background:#fbf7f3;
+      border-bottom:1px solid #eee5de;text-align:center
     }
-    .offer-body { padding: 28px 32px 30px; }
-    .what {
-      margin: 0 0 7px;
-      color: #3f7250;
-      font-size: 10px;
-      font-weight: 850;
-      letter-spacing: .13em;
-      text-transform: uppercase;
+    .offer-tag{
+      color:var(--gold);font-size:9px;font-weight:900;
+      letter-spacing:.16em;text-transform:uppercase
     }
-    .offer-body h3 {
-      margin: 0 0 9px;
-      color: #21372a;
-      font-size: 19px;
-      font-weight: 750;
-      letter-spacing: -.025em;
-      line-height: 1.35;
+    .offer h2{
+      margin:10px 0 7px;color:var(--ink);
+      font:800 clamp(25px,4vw,31px)/1.13 Manrope,sans-serif;
+      letter-spacing:-.04em
     }
-    .description {
-      max-width: 630px;
-      margin: 0;
-      color: #66746b;
-      font-size: 13px;
-      line-height: 1.75;
+    .offer h2 em{color:var(--red);font-style:normal}
+    .offer-head p{
+      max-width:550px;margin:0 auto;color:#6e655f;
+      font-size:13px;line-height:1.65
     }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 8px;
-      margin: 22px 0 24px;
+    .offer-content{padding:22px 25px 24px}
+    .offer-content h3{
+      margin:0 0 8px;color:#302a25;
+      font:800 17px/1.35 Manrope,sans-serif;letter-spacing:-.02em
     }
-    .step {
-      min-width: 0;
-      padding: 12px 8px 11px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      text-align: center;
+    .offer-content>p{
+      margin:0;color:#6e655f;font-size:13px;line-height:1.7
     }
-    .step b {
-      display: grid;
-      place-items: center;
-      width: 22px;
-      height: 22px;
-      margin: 0 auto 8px;
-      border-radius: 7px;
-      color: #315c40;
-      background: #e8f0e1;
-      font-size: 10px;
+    .mechanism-title{
+      margin:20px 0 10px;color:#8e7958;
+      font-size:9px;font-weight:900;letter-spacing:.15em;
+      text-align:left;text-transform:uppercase
     }
-    .step span {
-      display: block;
-      color: #405348;
-      font-size: 9px;
-      font-weight: 850;
-      letter-spacing: .045em;
-      line-height: 1.25;
+    .steps{
+      display:grid;grid-template-columns:repeat(5,1fr);
+      gap:8px;margin:0 0 22px
     }
-    .cta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      min-height: 56px;
-      padding: 15px 20px;
-      border-radius: 12px;
-      color: #13271d;
-      background: linear-gradient(180deg, #dceeb9, #c8e39a);
-      box-shadow: 0 7px 17px rgba(89,126,61,.17), inset 0 1px 0 rgba(255,255,255,.75);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .045em;
-      line-height: 1.35;
-      text-align: center;
-      text-decoration: none;
-      transition: transform .18s ease, box-shadow .18s ease;
+    .step{
+      min-width:0;padding:12px 6px 11px;
+      border:1px solid #e9e1da;border-radius:11px;
+      background:#fff;text-align:center
     }
-    .cta:hover { transform: translateY(-2px); box-shadow: 0 11px 22px rgba(89,126,61,.23); }
-    .cta:focus-visible { outline: 3px solid #66915a; outline-offset: 4px; }
-    .cta svg { flex: 0 0 18px; width: 18px; height: 18px; }
-    .secure {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      margin: 11px 0 0;
-      color: #89958d;
-      font-size: 10px;
-      text-align: center;
+    .step b{
+      display:grid;place-items:center;width:22px;height:22px;
+      margin:0 auto 8px;border-radius:7px;
+      color:#8e7958;background:#f3eae0;
+      font:800 10px Manrope,sans-serif
     }
-    .secure svg { width: 13px; height: 13px; }
-    .foot {
-      margin: 22px 0 0;
-      color: #89948d;
-      font-size: 10px;
-      line-height: 1.6;
-      text-align: center;
+    .step span{
+      display:block;color:#554d47;font-size:9px;
+      font-weight:900;letter-spacing:.025em;line-height:1.25
     }
-    @media (max-width: 560px) {
-      .top { height: 60px; font-size: 10px; }
-      main { padding: 35px 0 36px; }
-      .intro { margin: 14px auto 24px; font-size: 13px; }
-      .offer { border-radius: 18px; }
-      .offer-head { padding: 23px 21px 22px; }
-      .offer-head h2 { font-size: 34px; }
-      .offer-head p { font-size: 12px; }
-      .offer-body { padding: 23px 20px 22px; }
-      .offer-body h3 { font-size: 17px; }
-      .description { font-size: 12px; }
-      .steps { gap: 5px; margin: 18px 0 21px; }
-      .step { padding: 10px 3px 9px; border-radius: 9px; }
-      .step span { font-size: 8px; letter-spacing: 0; }
-      .step b { margin-bottom: 7px; }
-      .cta { min-height: 57px; padding-inline: 12px; font-size: 10px; }
+    .button{
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      width:100%;min-height:54px;padding:15px 18px;
+      border-radius:12px;background:var(--green);color:#fff;
+      box-shadow:0 8px 18px rgba(40,122,75,.18);
+      font-size:11px;font-weight:900;letter-spacing:.045em;
+      line-height:1.4;text-align:center;text-decoration:none;
+      transition:background .18s ease,transform .18s ease,box-shadow .18s ease
     }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { transition-duration: .01ms !important; }
+    .button:hover{
+      background:var(--green-dark);transform:translateY(-2px);
+      box-shadow:0 11px 23px rgba(40,122,75,.22)
+    }
+    .button:focus-visible{outline:3px solid #8ab89a;outline-offset:4px}
+    .button svg{flex:0 0 18px;width:18px;height:18px}
+    .secure{
+      display:flex;align-items:center;justify-content:center;gap:7px;
+      margin:12px 0 0;color:#92877f;font-size:10px;text-align:center
+    }
+    .secure svg{width:13px;height:13px}
+    .footer{
+      margin-top:23px;padding:16px 0 22px;
+      border-top:1px solid var(--line);color:#92877f;
+      font-size:9px;line-height:1.7;text-align:center
+    }
+    .footer span{letter-spacing:.07em}
+    @media(max-width:600px){
+      .shell{width:min(100% - 28px,500px)}
+      .topbar{padding:14px 0}
+      .brand{gap:9px;font-size:10px}
+      .brand-symbol{width:35px;height:35px;border-radius:11px}
+      .top-note{max-width:122px;font-size:9px;text-align:right}
+      .page{padding:24px 0 29px}
+      .panel{padding:23px 16px 19px;border-radius:19px}
+      .status{padding:9px 12px;font-size:9px;letter-spacing:.07em}
+      .eyebrow{margin-top:20px;font-size:8px}
+      h1{font-size:clamp(30px,8.5vw,39px);margin:11px auto}
+      .page-lead{font-size:12px;line-height:1.6}
+      .offer{margin-top:22px;border-radius:16px}
+      .offer-head{padding:19px 15px 17px}
+      .offer h2{font-size:25px}
+      .offer-head p{font-size:12px}
+      .offer-content{padding:18px 15px 17px}
+      .offer-content h3{font-size:15px}
+      .offer-content>p{font-size:12px;line-height:1.62}
+      .mechanism-title{margin:17px 0 9px;font-size:8px}
+      .steps{gap:5px;margin-bottom:18px}
+      .step{padding:10px 2px 9px;border-radius:8px}
+      .step b{width:19px;height:19px;margin-bottom:7px;font-size:9px}
+      .step span{font-size:7px;letter-spacing:0}
+      .button{min-height:54px;padding:13px 10px;font-size:10px}
+      .footer{margin-top:15px;padding:12px 0 16px}
+    }
+    @media(max-width:360px){
+      .steps{gap:4px}
+      .step span{font-size:6.5px}
+      .status{font-size:8px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{transition-duration:.01ms!important}
     }
   </style>
 </head>
 <body>
-  <header class="top"><span>GRAFISMO FONÉTICO</span>&nbsp; · &nbsp;ÁREA DE CONFIRMAÇÃO</header>
-  <main>
-    <div class="thanks">
-      <span class="check" aria-hidden="true">
-        <svg viewBox="0 0 20 20" fill="none"><path d="m4.5 10.5 3.4 3.3 7.6-7.7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-      Obrigado pela sua compra!
-    </div>
-    <h1>Sua compra foi confirmada.<br>Temos algo especial para você.</h1>
-    <p class="intro">Como agradecimento por escolher o Método Grafismo Fonético, preparamos uma oferta especial para clientes que também querem cuidar da segurança e da orientação dos filhos no mundo digital.</p>
-
-    <section class="offer" aria-labelledby="offer-title">
-      <div class="offer-head">
-        <div class="exclusive">
-          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m8 1.8 1.8 3.7 4.1.6-3 2.9.7 4.1L8 11.2l-3.6 1.9.7-4.1-3-2.9 4.1-.6L8 1.8Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
-          Oferta especial para clientes
-        </div>
-        <h2 id="offer-title">Conheça o <em>Método Fora do Algoritmo</em></h2>
-        <p>Um método de orientação familiar que ajuda mães e pais a entender melhor o universo digital dos filhos e agir com mais clareza, diálogo e direção.</p>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-symbol">GF</span>
+        <span>GRAFISMO<small>FONÉTICO</small></span>
       </div>
+      <span class="top-note">Uma condição especial para sua compra</span>
+    </header>
 
-      <div class="offer-body">
-        <p class="what">O que é e para que serve?</p>
-        <h3>Mais do que controlar as telas: aprender a orientar.</h3>
-        <p class="description">O Método Fora do Algoritmo é uma jornada prática, acompanhada por um aplicativo, criada para ajudar você a reconhecer sinais de atenção, investigar os ambientes digitais que seu filho frequenta, conversar sem transformar tudo em conflito, orientar com limites claros e fortalecer a relação de confiança dentro de casa.</p>
+    <main class="page">
+      <section class="panel center">
+        <div class="status"><span class="tick">✓</span> PARABÉNS PELA SUA COMPRA!</div>
+        <span class="eyebrow">Seu Método Grafismo Fonético está confirmado</span>
+        <h1>Você deu um passo importante<br><em>para cuidar do desenvolvimento do seu filho.</em></h1>
+        <p class="page-lead">Obrigado pela confiança! E, como cliente, você tem agora a oportunidade de conhecer uma oferta especial para cuidar de outro aspecto importante da formação das crianças: a relação com o mundo digital.</p>
 
-        <div class="steps" aria-label="Os cinco passos do método">
-          <div class="step"><b>01</b><span>RECONHECER</span></div>
-          <div class="step"><b>02</b><span>INVESTIGAR</span></div>
-          <div class="step"><b>03</b><span>CONVERSAR</span></div>
-          <div class="step"><b>04</b><span>ORIENTAR</span></div>
-          <div class="step"><b>05</b><span>FORTALECER</span></div>
+        <div class="offer">
+          <div class="offer-head">
+            <div class="offer-tag">Oferta especial para clientes</div>
+            <h2>Conheça o <em>Método Fora do Algoritmo</em></h2>
+            <p>Um método de orientação familiar, acompanhado por um aplicativo, para ajudar você a entender melhor o ambiente digital dos seus filhos e saber como agir.</p>
+          </div>
+
+          <div class="offer-content">
+            <h3>Não se trata apenas de limitar as telas. Trata-se de saber orientar.</h3>
+            <p>O Método Fora do Algoritmo oferece um caminho prático para que mães e pais reconheçam sinais de atenção, investiguem os conteúdos e ambientes digitais, conversem com os filhos, estabeleçam limites e fortaleçam a confiança dentro de casa.</p>
+
+            <div class="mechanism-title">O mecanismo: 5 etapas para orientar sua família</div>
+            <div class="steps">
+              <div class="step"><b>01</b><span>RECONHECER</span></div>
+              <div class="step"><b>02</b><span>INVESTIGAR</span></div>
+              <div class="step"><b>03</b><span>CONVERSAR</span></div>
+              <div class="step"><b>04</b><span>ORIENTAR</span></div>
+              <div class="step"><b>05</b><span>FORTALECER</span></div>
+            </div>
+
+            <a class="button" href="https://pay.cakto.com.br/5ghcqku_1292155">
+              SIM! QUERO CONHECER O MÉTODO FORA DO ALGORITMO
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 10h12m-4.5-4.5L15.5 10 11 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <p class="secure">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              Você será direcionado ao checkout seguro da Cakto.
+            </p>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <a class="cta" href="https://pay.cakto.com.br/5ghcqku_1292155">
-          QUERO APROVEITAR A OFERTA ESPECIAL
-          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 10h12m-4.5-4.5L15.5 10 11 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <p class="secure">
-          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-          Compra processada em ambiente seguro pela Cakto.
-        </p>
-      </div>
-    </section>
-
-    <p class="foot">Agradecemos pela confiança. Desejamos muito sucesso nessa jornada com sua família.</p>
-  </main>
+    <footer class="footer">
+      MÉTODO FORA DO ALGORITMO<br>
+      <span>RECONHECER · INVESTIGAR · CONVERSAR · ORIENTAR · FORTALECER</span>
+    </footer>
+  </div>
 </body>
 </html>
