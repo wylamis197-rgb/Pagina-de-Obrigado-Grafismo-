@@ -30,6 +30,17 @@
     .mechanism{margin:0 0 17px;padding:16px 18px;border-radius:12px;background:#f7f6f2}
     .mechanism strong{display:block;margin-bottom:7px;font-size:13px}
     .mechanism p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+    .appShowcase{margin:20px 0 22px;padding:18px 12px 15px;border:1px solid #e9e3da;border-radius:15px;background:#fbfaf7}
+    .appShowcaseTitle{margin:0 0 5px;color:#25241f;font-size:13px;font-weight:900;letter-spacing:.08em;text-align:center}
+    .appShowcaseIntro{margin:0 0 15px;color:#77736b;font-size:11px;line-height:1.5;text-align:center}
+    .phoneGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start}
+    .phoneItem{min-width:0;text-align:center}
+    .phoneFrame{width:min(100%,126px);margin:0 auto;padding:5px;border:1px solid #647080;border-radius:22px;background:linear-gradient(145deg,#28313d,#090d13 55%,#202833);box-shadow:0 7px 15px rgba(17,24,39,.18),inset 0 0 0 1px rgba(255,255,255,.1)}
+    .phoneScreen{position:relative;overflow:hidden;aspect-ratio:9/17.5;border-radius:16px;background:#dce9e4}
+    .phoneNotch{position:absolute;z-index:2;top:5px;left:50%;width:34px;height:7px;transform:translateX(-50%);border-radius:99px;background:#080b0f;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+    .phoneScreen img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+    .phoneCaption{margin:9px 0 0;color:#34362f;font-size:10px;font-weight:900;line-height:1.3}
+    .phoneSub{margin:4px 0 0;color:#858178;font-size:9px;line-height:1.35}
     .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:0 0 22px}
     .step{padding:10px 4px;border:1px solid var(--line);border-radius:9px;text-align:center;font-size:9px;font-weight:900;line-height:1.35;color:#55584f}
     .step b{display:block;margin-bottom:4px;color:var(--red);font-size:10px}
@@ -46,6 +57,15 @@
     .decline{display:block;width:max-content;max-width:100%;margin:19px auto 0;color:#85877f;font-size:12px;line-height:1.5;text-align:center;text-decoration:underline;text-underline-offset:3px}
     footer{padding:18px 0 28px;text-align:center;color:#92948d;font-size:10px;letter-spacing:.08em}
     @keyframes attention{0%,100%{opacity:1;transform:scale(1);background:#148044;box-shadow:0 8px 0 #0b5d30,0 12px 23px rgba(20,128,68,.2)}50%{opacity:.84;transform:scale(1.018);background:#20a354;box-shadow:0 8px 0 #0b5d30,0 15px 30px rgba(20,128,68,.34)}}
+    @media(max-width:560px){
+      .appShowcase{margin:17px 0 19px;padding:15px 8px 12px}
+      .phoneGrid{gap:5px}
+      .phoneFrame{padding:4px;border-radius:17px}
+      .phoneScreen{border-radius:12px}
+      .phoneNotch{top:4px;width:28px;height:6px}
+      .phoneCaption{font-size:9px}
+      .phoneSub{font-size:8px}
+    }
     @media(max-width:560px){main{padding:28px 0 38px}.wrap{width:calc(100% - 24px)}.confirm{margin-bottom:22px}.confirm p{font-size:12px}.offerTop{padding:23px 17px 17px}.offerBody{padding:0 16px 22px}.sub{font-size:12px}.mechanism{padding:14px}.mechanism p{font-size:12px}.steps{gap:4px}.step{padding:9px 2px;font-size:7px}.step b{font-size:9px}.buy{min-height:70px;padding:15px 12px;font-size:13px}.decline{font-size:11px;margin-top:17px}}
     @media(prefers-reduced-motion:reduce){.buy{animation:none}}
   </style>
@@ -71,6 +91,42 @@
           <strong>O que é e para que serve?</strong>
           <p>É um método prático, acompanhado por um aplicativo, que ajuda mães e pais a reconhecer sinais de atenção no ambiente digital, investigar o que acontece, conversar sem afastar os filhos, orientar com clareza e fortalecer os vínculos e os combinados familiares.</p>
         </div>
+        <section class="appShowcase" aria-label="Prévia real do aplicativo Fora do Algoritmo">
+          <h3 class="appShowcaseTitle">VEJA O APLICATIVO POR DENTRO</h3>
+          <p class="appShowcaseIntro">Três telas reais do app: biblioteca, jornada guiada e jogos para aprender em família.</p>
+          <div class="phoneGrid">
+            <article class="phoneItem">
+              <div class="phoneFrame">
+                <div class="phoneScreen">
+                  <span class="phoneNotch" aria-hidden="true"></span>
+                  <img src="https://foradoalgoritimo.vercel.app/assets/aistudio/IMG_7242_b6851541.jpg" alt="Tela real da Biblioteca digital do aplicativo Fora do Algoritmo" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <h4 class="phoneCaption">Biblioteca digital</h4>
+              <p class="phoneSub">Materiais para os pais</p>
+            </article>
+            <article class="phoneItem">
+              <div class="phoneFrame">
+                <div class="phoneScreen">
+                  <span class="phoneNotch" aria-hidden="true"></span>
+                  <img src="https://foradoalgoritimo.vercel.app/assets/aistudio/IMG_7245_4db24311.jpg" alt="Tela real da Jornada de 30 dias do aplicativo Fora do Algoritmo" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <h4 class="phoneCaption">Jornada de 30 dias</h4>
+              <p class="phoneSub">Pequenas ações diárias</p>
+            </article>
+            <article class="phoneItem">
+              <div class="phoneFrame">
+                <div class="phoneScreen">
+                  <span class="phoneNotch" aria-hidden="true"></span>
+                  <img src="https://foradoalgoritimo.vercel.app/assets/aistudio/IMG_7244_e68b9a4d.jpg" alt="Tela real de Jogos e Quizzes do aplicativo Fora do Algoritmo" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <h4 class="phoneCaption">Jogos e quizzes</h4>
+              <p class="phoneSub">Aprender conversando</p>
+            </article>
+          </div>
+        </section>
         <div class="steps" aria-label="As cinco etapas do método">
           <div class="step"><b>01</b>RECONHECER</div>
           <div class="step"><b>02</b>INVESTIGAR</div>
