@@ -1,9 +1,9 @@
 const FILE_ID = "1WFVsqpiuSnPRztWBn35gmE1-A3yvebJ1";
-const DRIVE_URL = `https://drive.google.com/uc?export=download&id=${FILE_ID}`;
+const DRIVE_URL = "https://drive.google.com/uc?export=download&id=" + FILE_ID;
 
 function getHiddenFields(form) {
   const fields = {};
-  const inputs = form.match(/<input\\b[^>]*>/gi) || [];
+  const inputs = form.match(/<input\b[^>]*>/gi) || [];
   for (const input of inputs) {
     const type = (input.match(/type=["']([^"']+)["']/i) || [])[1];
     const name = (input.match(/name=["']([^"']+)["']/i) || [])[1];
@@ -27,7 +27,7 @@ async function resolveDriveResponse(rangeHeader) {
   // Google may require an explicit confirmation form for some downloadable files.
   if (firstType.includes("text/html") && !upstream.url.includes("accounts.google.com")) {
     const html = await upstream.text();
-    const formMatch = html.match(/<form\\b[^>]*>[\\s\\S]*?<\\/form>/i);
+    const formMatch = html.match(/<form\b[^>]*>[\s\S]*?<\/form>/i);
     if (formMatch) {
       const action = (formMatch[0].match(/action=["']([^"']+)["']/i) || [])[1];
       if (action) {
@@ -87,7 +87,7 @@ module.exports = async function handler(req, res) {
   }
 
   res.statusCode = upstream.status;
-  res.setHeader("Content-Type", type.includes("video/") ? (upstream.headers.get("content-type")) : "video/mp4");
+  res.setHeader("Content-Type", type.includes("video/") ? upstream.headers.get("content-type") : "video/mp4");
   res.setHeader("Content-Disposition", 'inline; filename="apresentacao.mp4"');
   res.setHeader("Accept-Ranges", upstream.headers.get("accept-ranges") || "bytes");
   res.setHeader("Cache-Control", "public, max-age=300, s-maxage=300");
